@@ -3,18 +3,18 @@
 
 module.exports = function towelSort (matrix) {
 
-  let result = []
+  let sorted = []
 
   if (!matrix) {
-     return result;
+     return sorted;
   }
 
   for(let i = 0; i < matrix.length; i++) {
     if(i % 2 === 0) {
-      result = result.concat(matrix[i]);
+      sorted = sorted.concat(matrix[i]);
     } else {
-      result = result.concat(matrix[i].reverse());
+      sorted = sorted.concat(matrix[i].reverse());
     }
   }
-  return result;
+  return sorted;
 }
